@@ -1,5 +1,6 @@
 <script lang="ts">
     import { client_session_store } from "$lib/client";
+    import Icon from "@iconify/svelte";
 
     async function echo_ws() {
         await fetch("/api/ws_toast_echo", {
@@ -17,5 +18,6 @@
 
     <button class="btn variant-filled-primary" on:click={echo_ws}>
         WS Toast Echo (asks server to send a message via WebSocket)
+        <Icon icon="hugeicons:plug-socket" width="24" />
     </button>
 </div>
