@@ -1,0 +1,9 @@
+version: "3.4"
+
+services:
+    sveltekit:
+        network_mode: "host"
+        build:
+            context: .
+            dockerfile: Dockerfile
+        command: node build
